@@ -2,17 +2,24 @@
 <!--Quite a few clients strip your Doctype out, and some even apply their own. Many clients do honor your doctype and it can make things much easier if you can validate constantly against a Doctype.-->
 <html>
 <head>
+
+	
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=.5">
 <title>CLAIMS template By FEE-NOM TEAM </title>
 
 <!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients --> 
 <!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
 
 <style type="text/css">
+ 
+body{
+	overflow:hidden;
+	}
 body {
     margin: 0;
 }
+	 
 body, table, td, p, a, li, blockquote {
     -webkit-text-size-adjust: none!important;
     font-family: sans-serif;
@@ -110,7 +117,7 @@ button {
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="tablecss3.css" rel="stylesheet" type="text/css">
 </head>
-<body yahoo="yahoo">
+<body yahoo="yahoo" >
 
 <table width="100%"  cellspacing="0" cellpadding="0">
   <tbody>
@@ -148,7 +155,7 @@ button {
                   </tr>
                   <tr> 
                     <!-- row container for Tagline -->
-                    <td align="center" style="font-size: 16px; font-weight:300; color: #929292; font-family: sans-serif;">Claim ID:# U673445 </td>
+                    <td align="center" style="font-size: 16px; font-weight:300; color: #929292; font-family: sans-serif;">Claim ID:# <div id="results"> </div> </td>
                   </tr>
                   <tr> 
                     <!-- Row container for Intro/ Description -->
@@ -451,5 +458,19 @@ button {
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/popper.min.js"></script> 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+		<script>
+			
+		$.urlParam = function(name){
+     	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+     	return results[1] || 0;
+       }	
+			// example.com?param1=name&param2=&id=6
+			
+			
+			
+		var claimid = $.urlParam('claimid');
+		$( "#results" ).text(claimid );
+		
+	</script>
 </body>
 </html>
