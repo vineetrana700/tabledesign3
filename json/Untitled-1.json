@@ -1,0 +1,41 @@
+GET /claimid/001 HTTP/1.1
+Accept: application/vnd.api+json
+{
+    "data": [
+        {
+            "type": "claim_image",
+            "id": 1,
+            "links": {
+                "self": "/claimid/001/claim_image"
+            } 
+        },
+        {
+            "type": "claim_image_url",
+            "id": 2,
+            "links": {
+                "self": "/claimid/001/doc_url/claim_image_url",
+                "related": "/claimid/1/claim_image"
+            }
+        },
+        {
+            "type": "claim_image_log_error",
+            "id": 3,
+            "links": {
+                "self": "/claimid/001/log_error"
+            }
+        }
+    ],
+    "meta": {
+        "api": {
+            "version": "1.0"
+        },
+        "environment": "dev",
+        "requestor": "user1"
+    },
+    "errors": {
+        ""
+    }
+}
+
+
+

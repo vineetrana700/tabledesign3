@@ -1,0 +1,24 @@
+
+HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json
+
+{
+    "included": 
+ { "links": {
+    "self": "/claimid/001",
+    "self": "/claimid/001/doctype/claimidurl"
+},
+  "data": [{
+    "type": "claimid",
+    "id": "1",
+    "attributes": {
+      "docid": "x23423426"
+    }
+  }, {
+    "type": "claimidurl",
+    "id": "2",
+    "attributes": {
+      "url": "filenet://xsdffsd"
+    }
+  }]
+}
